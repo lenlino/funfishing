@@ -14,6 +14,9 @@ public final class Mcfunfishing extends JavaPlugin {
     FileConfiguration config=getConfig();
     @Override
     public void onEnable() {
+        if(!getDataFolder().exists()){
+            getDataFolder().mkdir();
+        }
         Bukkit.getPluginManager().registerEvents(new FishingEvent(this),this);
         config.options().copyDefaults(true);
         for(String key:config.getKeys(false)){
