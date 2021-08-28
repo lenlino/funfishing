@@ -1,0 +1,6 @@
+test:
+  min: 10
+  max: 1000
+  name: "test"
+  material: "STONE"
+  rarity: "3"
