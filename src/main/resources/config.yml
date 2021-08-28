@@ -1,6 +1,7 @@
-test:
-  min: 10
-  max: 1000
-  name: test
-  material: STONE
-  rarity: "3"
+fishlist:
+  test:
+    min: 10
+    max: 1000
+    name: test
+    material: STONE
+    rarity: "3"
