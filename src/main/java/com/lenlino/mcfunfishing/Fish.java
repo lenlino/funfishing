@@ -20,7 +20,7 @@ public class Fish {
         this.item=new ItemStack(material);
         ItemMeta meta=this.item.getItemMeta();
         meta.setDisplayName(name);
-        meta.setLore(new ArrayList<String>(Collections.singleton(rea)));
+        meta.setLore(new ArrayList<>(Collections.singleton(rea)));
         this.item.setItemMeta(meta);
     }
     public ItemStack getFish(){
