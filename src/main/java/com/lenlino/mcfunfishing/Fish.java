@@ -15,8 +15,9 @@ public class Fish {
     int min;
     int max;
     ItemStack item;
+    String key;
     Random random=new Random();
-    public Fish(int min, int max, String name, Material material,String rea){
+    public Fish(int min, int max, String name, Material material,String rea,String key){
         this.max=max;
         this.min=min;
         this.item=new ItemStack(material);
@@ -24,6 +25,7 @@ public class Fish {
         meta.setDisplayName(name);
         meta.setLore(new ArrayList<>(Collections.singleton(ChatColor.RESET+rea)));
         this.item.setItemMeta(meta);
+        this.key=key;
     }
     public ItemStack getFish(){
         ItemStack item=this.item.clone();

@@ -3,5 +3,5 @@ fishlist:
     min: 10
     max: 1000
     name: test
-    material: STONE
+    material: APPLE
     rarity: "3"
