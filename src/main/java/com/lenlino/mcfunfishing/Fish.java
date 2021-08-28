@@ -22,8 +22,8 @@ public class Fish {
         ItemMeta meta=this.item.getItemMeta();
         meta.setDisplayName(name);
         List<String> list=new ArrayList<>();
-        list.add(ChatColor.RESET+rea);
-        list.add(ChatColor.RESET+setumei);
+        list.add(ChatColor.WHITE+rea);
+        list.add(ChatColor.WHITE+setumei);
         meta.setLore(list);
         this.item.setItemMeta(meta);
         this.key=key;
@@ -32,7 +32,7 @@ public class Fish {
         ItemStack item=this.item.clone();
         ItemMeta meta=item.getItemMeta();
         List<String> list=meta.getLore();
-        list.add(ChatColor.RESET+String.valueOf(random.nextInt(this.max-this.min+1)+this.min)+"cm");
+        list.add(ChatColor.WHITE+String.valueOf(random.nextInt(this.max-this.min+1)+this.min)+"cm");
         meta.setLore(list);
         item.setItemMeta(meta);
         return item;
