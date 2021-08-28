@@ -26,7 +26,7 @@ public final class Mcfunfishing extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new FishingEvent(this),this);
         config.options().copyDefaults(true);
         for(String key:config.getConfigurationSection("fishlist").getKeys(false)){
-            fish.add(new Fish(config.getInt("fishlist."+key+".min"),config.getInt("fishlist."+key+".max"),config.getString("fishlist."+key+".name"), Material.valueOf(config.getString("fishlist."+key+".material")),config.getString("fishlist."+key+".rarity"),key));
+            fish.add(new Fish(config.getInt("fishlist."+key+".min"),config.getInt("fishlist."+key+".max"),config.getString("fishlist."+key+".name"), Material.valueOf(config.getString("fishlist."+key+".material")),config.getString("fishlist."+key+".rarity"),key,config.getString("fishlist."+key+".comment")));
         }
         addMap();
     }

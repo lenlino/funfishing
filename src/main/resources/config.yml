@@ -5,3 +5,4 @@ fishlist:
     name: test
     material: APPLE
     rarity: "3"
+    comment: aaaa
