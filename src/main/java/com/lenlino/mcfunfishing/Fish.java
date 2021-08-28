@@ -25,7 +25,6 @@ public class Fish {
         list.add(ChatColor.WHITE +rea);
         list.add(ChatColor.WHITE+setumei);
         meta.setLore(list);
-        meta.setCustomModelData(1234567);
         this.item.setItemMeta(meta);
         this.key=key;
     }
