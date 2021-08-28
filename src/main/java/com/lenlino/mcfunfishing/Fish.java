@@ -22,9 +22,10 @@ public class Fish {
         ItemMeta meta=this.item.getItemMeta();
         meta.setDisplayName(name);
         List<String> list=new ArrayList<>();
-        list.add(ChatColor.WHITE+rea);
+        list.add(ChatColor.WHITE +rea);
         list.add(ChatColor.WHITE+setumei);
         meta.setLore(list);
+        meta.setCustomModelData(1234567);
         this.item.setItemMeta(meta);
         this.key=key;
     }
