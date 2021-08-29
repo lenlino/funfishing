@@ -1,8 +1,22 @@
 fishlist:
-  test:
-    min: 10
-    max: 1000
-    name: test
+  tuna:
+    min: 70
+    max: 300
+    name: §bマグロ
+    material: COOKED_MUTTON
+    rarity: §e★★★
+    comment: うまそう
+  whale:
+    min: 10000
+    max: 100000
+    name: §bクジラ
+    material: RABBIT
+    rarity: ☆
+    comment: でかい、なんで取っているんだ...
+  creeperFish:
+    min: 100
+    max: 200
+    name: §bクリーパーFish
     material: APPLE
-    rarity: "3"
-    comment: aaaa
+    rarity: §e★★★
+    comment: 今にも爆破しそうだ

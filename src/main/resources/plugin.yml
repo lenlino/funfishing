@@ -3,3 +3,7 @@ version: '${project.version}'
 main: com.lenlino.mcfunfishing.Mcfunfishing
 api-version: 1.17
 description: 釣りプラグイン
+commands:
+  mcfget:
+    description: 魚をゲットする
+    permission: mcfish.get

@@ -3,7 +3,10 @@ package com.lenlino.mcfunfishing;
 import org.bukkit.Bukkit;
 
 import org.bukkit.Material;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -30,9 +33,33 @@ public final class Mcfunfishing extends JavaPlugin {
         addMap();
     }
     private void addMap(){
-        FishKouka.put(config.getString("fishlist.test.name"),p->{
-           p.addPotionEffect(new PotionEffect(PotionEffectType.SPEED,200,3));
+        FishKouka.put(config.getString("fishlist.tuna.name"),(p,item)->{
+           p.sendMessage("§eうまかった");
         });
+        FishKouka.put(config.getString("fishlist.whale.name"),(p,item)->{
+            p.damage(999);
+            p.sendMessage("§eでかすぎてのどに詰まらせてしまった...");
+        });
+        FishKouka.put(config.getString("fishlist.creeperFish.name"),(p,item)->{
+           p.getWorld().createExplosion(p.getLocation(),3);
+        });
+    }
+
+    @Override
+    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        if(command.getName().equals("mcfget")){
+            if(config.getConfigurationSection("fishlist").contains(args[0])){
+                if(sender instanceof Player){
+                    ((Player)sender).getInventory().addItem(new Fish(config.getInt("fishlist."+args[0]+".min"),config.getInt("fishlist."+args[0]+".max"),config.getString("fishlist."+args[0]+".name"), Material.valueOf(config.getString("fishlist."+args[0]+".material")),config.getString("fishlist."+args[0]+".rarity"),args[0],config.getString("fishlist."+args[0]+".comment")).getFish());
+                    return true;
+                }else{
+                    sender.sendMessage("プレーヤーが実行してください");
+                }
+            }else{
+                sender.sendMessage("魚が見つかりませんでした");
+            }
+        }
+        return false;
     }
     @Override
     public void onDisable() {

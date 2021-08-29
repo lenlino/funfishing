@@ -19,7 +19,7 @@ public class FishingEvent implements Listener {
         if(e.getItem()!=null) {
             if(e.getItem().hasItemMeta()) {
                 if (plugin.FishKouka.containsKey(e.getItem().getItemMeta().getDisplayName())) {
-                    plugin.FishKouka.get(e.getItem().getItemMeta().getDisplayName()).Eatfish(e.getPlayer());
+                    plugin.FishKouka.get(e.getItem().getItemMeta().getDisplayName()).Eatfish(e.getPlayer(),e.getItem());
                 }
             }
         }
