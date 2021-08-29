@@ -6,6 +6,7 @@ fishlist:
     material: COOKED_MUTTON
     rarity: §e★★★
     comment: うまそう
+    modelData: 1
   whale:
     min: 10000
     max: 100000
@@ -13,6 +14,7 @@ fishlist:
     material: RABBIT
     rarity: ☆
     comment: でかい、なんで取っているんだ...
+    modelData: 1
   creeperFish:
     min: 100
     max: 200
@@ -20,3 +22,4 @@ fishlist:
     material: APPLE
     rarity: §e★★★
     comment: 今にも爆破しそうだ
+    modelData: 1

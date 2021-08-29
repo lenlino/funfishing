@@ -26,7 +26,7 @@ public final class Mcfunfishing extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new FishingEvent(this),this);
         config.options().copyDefaults(true);
         for(String key:config.getConfigurationSection("fishlist").getKeys(false)){
-            fish.add(new Fish(config.getInt("fishlist."+key+".min"),config.getInt("fishlist."+key+".max"),config.getString("fishlist."+key+".name"), Material.valueOf(config.getString("fishlist."+key+".material")),config.getString("fishlist."+key+".rarity"),key,config.getString("fishlist."+key+".comment")));
+            fish.add(new Fish(config.getInt("fishlist."+key+".min"),config.getInt("fishlist."+key+".max"),config.getString("fishlist."+key+".name"), Material.valueOf(config.getString("fishlist."+key+".material")),config.getString("fishlist."+key+".rarity"),key,config.getString("fishlist."+key+".comment"),config.getInt("fishlist."+key+".modelData")));
         }
         addMap();
     }
@@ -48,7 +48,7 @@ public final class Mcfunfishing extends JavaPlugin {
         if(command.getName().equals("mcfget")){
             if(config.getConfigurationSection("fishlist").contains(args[0])){
                 if(sender instanceof Player){
-                    ((Player)sender).getInventory().addItem(new Fish(config.getInt("fishlist."+args[0]+".min"),config.getInt("fishlist."+args[0]+".max"),config.getString("fishlist."+args[0]+".name"), Material.valueOf(config.getString("fishlist."+args[0]+".material")),config.getString("fishlist."+args[0]+".rarity"),args[0],config.getString("fishlist."+args[0]+".comment")).getFish());
+                    ((Player)sender).getInventory().addItem(new Fish(config.getInt("fishlist."+args[0]+".min"),config.getInt("fishlist."+args[0]+".max"),config.getString("fishlist."+args[0]+".name"), Material.valueOf(config.getString("fishlist."+args[0]+".material")),config.getString("fishlist."+args[0]+".rarity"),args[0],config.getString("fishlist."+args[0]+".comment"),config.getInt("fishlist."+args[0]+".modelData")).getFish());
                     return true;
                 }else{
                     sender.sendMessage("プレーヤーが実行してください");

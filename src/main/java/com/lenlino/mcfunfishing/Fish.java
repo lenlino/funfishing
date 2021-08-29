@@ -15,7 +15,7 @@ public class Fish {
     ItemStack item;
     String key;
     Random random=new Random();
-    public Fish(int min, int max, String name, Material material,String rea,String key,String setumei){
+    public Fish(int min, int max, String name, Material material,String rea,String key,String setumei,int number){
         this.max=max;
         this.min=min;
         this.item=new ItemStack(material);
@@ -25,6 +25,7 @@ public class Fish {
         list.add(ChatColor.WHITE +rea);
         list.add(ChatColor.WHITE+setumei);
         meta.setLore(list);
+        meta.setCustomModelData(number);
         this.item.setItemMeta(meta);
         this.key=key;
     }
