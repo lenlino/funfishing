@@ -23,3 +23,31 @@ fishlist:
     rarity: §e★★★
     comment: 今にも爆破しそうだ
     modelData: 1
+  Flathead:
+    min: 40
+    max: 90
+    name: §bマゴチ
+    material: cod
+    rarity: §e★★★★
+    comment: 高級食材、頭の棘に注意
+  Caranginae:
+    min: 10
+    max: 160
+    name: §bアジ
+    material: cod
+    rarity: §e★
+    comment:
+  sardine:
+    min: 10
+    max: 30
+    name: §bイワシ
+    material: cod
+    rarity: §e★
+    comment: DHAが豊富
+  Carassius auratus:
+    min: 5
+    max: 30
+    name: §bキンギョ
+    material: cod
+    rarity: §e★★
+    comment: あまり美味しくない
