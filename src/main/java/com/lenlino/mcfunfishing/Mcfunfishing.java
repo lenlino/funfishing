@@ -13,9 +13,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public final class Mcfunfishing extends JavaPlugin {
     List<Fish> fish=new ArrayList<>();
+    List<Fish> star1 = new ArrayList<>();
+    List<Fish> star2 = new ArrayList<>();
+    List<Fish> star3 = new ArrayList<>();
+    List<Fish> star4 = new ArrayList<>();
+    List<Fish> star5 = new ArrayList<>();
     FileConfiguration config=getConfig();
     Map<String,kouka> FishKouka=new HashMap<>();
     @Override
@@ -28,6 +34,11 @@ public final class Mcfunfishing extends JavaPlugin {
         for(String key:config.getConfigurationSection("fishlist").getKeys(false)){
             fish.add(new Fish(config.getInt("fishlist."+key+".min"),config.getInt("fishlist."+key+".max"),config.getString("fishlist."+key+".name"), Material.valueOf(config.getString("fishlist."+key+".material")),config.getString("fishlist."+key+".rarity"),key,config.getString("fishlist."+key+".comment"),config.getInt("fishlist."+key+".modelData")));
         }
+        star1 = fish.stream().filter(fish -> fish.rarity.equals("§e★")).collect(Collectors.toList());
+        star2 = fish.stream().filter(fish -> fish.rarity.equals("§e★★")).collect(Collectors.toList());
+        star3 = fish.stream().filter(fish -> fish.rarity.equals("§e★★★")).collect(Collectors.toList());
+        star4 = fish.stream().filter(fish -> fish.rarity.equals("§e★★★★")).collect(Collectors.toList());
+        star5 = fish.stream().filter(fish -> fish.rarity.equals("§e★★★★★")).collect(Collectors.toList());
         addMap();
     }
     private void addMap(){

@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Random;
 
 public class Fish {
+    String rarity;
     int min;
     int max;
     ItemStack item;
@@ -19,6 +20,7 @@ public class Fish {
         this.max=max;
         this.min=min;
         this.item=new ItemStack(material);
+        this.rarity=rea;
         ItemMeta meta=this.item.getItemMeta();
         meta.setDisplayName(name);
         List<String> list=new ArrayList<>();

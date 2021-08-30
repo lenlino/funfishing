@@ -30,11 +30,17 @@ public class FishingEvent implements Listener {
     }
     @EventHandler
     public void GetFishEvent(PlayerFishEvent e){
-        if(e.getState()== PlayerFishEvent.State.CAUGHT_FISH){
-            if(e.getCaught()!=null){
-                if(e.getCaught() instanceof Item&&random.nextBoolean()){
-                    ((Item)e.getCaught()).setItemStack(plugin.fish.get(random.nextInt(plugin.fish.size())).getFish());
-                }
+        if(e.getState()== PlayerFishEvent.State.CAUGHT_FISH&&e.getCaught()!=null && e.getCaught() instanceof Item){
+            if(random.nextInt(100)<50){
+                ((Item)e.getCaught()).setItemStack(plugin.star1.get(random.nextInt(plugin.star1.size())).getFish());
+            } else if (random.nextInt(100)<40) {
+                ((Item)e.getCaught()).setItemStack(plugin.star2.get(random.nextInt(plugin.star2.size())).getFish());
+            } else if (random.nextInt(100)<30) {
+                ((Item)e.getCaught()).setItemStack(plugin.star3.get(random.nextInt(plugin.star3.size())).getFish());
+            } else if (random.nextInt(100)<20) {
+                ((Item)e.getCaught()).setItemStack(plugin.star4.get(random.nextInt(plugin.star4.size())).getFish());
+            } else {
+                ((Item)e.getCaught()).setItemStack(plugin.star5.get(random.nextInt(plugin.star5.size())).getFish());
             }
         }
     }

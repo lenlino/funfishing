@@ -12,7 +12,7 @@ fishlist:
     max: 100000
     name: §bクジラ
     material: RABBIT
-    rarity: ☆
+    rarity: §e★
     comment: でかい、なんで取っているんだ...
     modelData: 1
   creeperFish:
@@ -72,4 +72,26 @@ fishlist:
     material: cod
     rarity: §e★★★
     comment:
+  Sepioteuthis_lessoniana:
+    min: 30
+    max: 60
+    name: §bアオリイカ
+    material: cod
+    rarity: §e★
+    comment:
+  Silurus_asotus:
+    min: 10
+    max: 50
+    name: §bナマズ
+    material: cod
+    rarity: §e★★
+    comment:
+  Octopoda:
+    min: 20
+    max: 100
+    name: §bタコ
+    rarity: §e★
+    comment:
+
+
 
