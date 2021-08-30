@@ -51,3 +51,25 @@ fishlist:
     material: cod
     rarity: §e★★
     comment: あまり美味しくない
+  Anguilla:
+    min: 10
+    max: 40
+    name: §bウナギ
+    material: cod
+    rarity: §e★★★
+    comment:
+  Parahucho perry:
+    min: 30
+    max: 70
+    name: §bイトウ
+    material: cod
+    rarity: §e★★★★★
+    comment: 絶滅危惧種
+  Snow crab:
+    min: 50
+    max: 70
+    name: §bズワイガニ
+    material: cod
+    rarity: §e★★★
+    comment:
+
