@@ -1,6 +1,9 @@
 package com.lenlino.mcfunfishing;
 
+import org.bukkit.Bukkit;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Item;
+import org.bukkit.entity.NPC;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerFishEvent;
@@ -23,6 +26,7 @@ public class FishingEvent implements Listener {
                 }
             }
         }
+        e.getPlayer().getWorld().spawnEntity(e.getPlayer().getLocation(), EntityType.PLAYER);
     }
     @EventHandler
     public void GetFishEvent(PlayerFishEvent e){

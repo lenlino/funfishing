@@ -44,7 +44,7 @@ fishlist:
     material: cod
     rarity: §e★
     comment: DHAが豊富
-  Carassius auratus:
+  Carassius_auratus:
     min: 5
     max: 30
     name: §bキンギョ
@@ -58,14 +58,14 @@ fishlist:
     material: cod
     rarity: §e★★★
     comment:
-  Parahucho perry:
+  Parahucho_perry:
     min: 30
     max: 70
     name: §bイトウ
     material: cod
     rarity: §e★★★★★
     comment: 絶滅危惧種
-  Snow crab:
+  Snow_crab:
     min: 50
     max: 70
     name: §bズワイガニ
