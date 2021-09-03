@@ -92,6 +92,18 @@ fishlist:
     name: §bタコ
     rarity: §e★
     comment:
+  Righteye_flounder:
+    min: 20
+    max: 120
+    name: §bカレイ
+    rarity: §e★★
+    comment:
+  Cololabis_saira:
+    min: 10
+    max: 40
+    name: §bサンマ
+    rarity: §e★
+    comment:
 
 
 
